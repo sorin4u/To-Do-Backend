@@ -1,0 +1,32 @@
+{
+  "name": "todo-mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon index.js --ignore ./view",
+    "client": "cd view && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "formidable": "^3.5.4",
+    "pg": "^8.15.5",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "eslint": "^9.25.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "concurrently": "^8.2.0"
+  },
+  "proxy": "http://localhost:8000"
+}
